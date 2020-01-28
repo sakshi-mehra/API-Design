@@ -22,7 +22,10 @@
       <property name = "PostalCode" column = "PostalCode" type = "string"/>
       <property name = "HomePhone" column = "HomePhone" type = "string"/>
       <property name = "OfficeExtension" column = "OfficeExtension" type = "string"/>
-      <property name = "HireDate" column = "HireDate" type = "string"/>
+      <property name = "HireDate" column = "HireDate"/>
+      <property name = "JobClassification" column = "JobClassification" type = "string"/>
+      <property name = "HourSalComm" column = "HourSalComm" type = "string"/>
+      
 
       
    </class>
