@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class Employee {
    
    private String EmployeeName;
@@ -8,9 +10,11 @@ public class Employee {
    private int PostalCode;
    private long HomePhone;
    private int OfficeExtension;
-   private String HireDate;
+   private Date HireDate;
    private String JobClassification;
    private String HourSalComm;
+   DateFormat format = new SimpleDateFormat("MMMM d, yyyy", Locale.ENGLISH);
+
 
    public Employee() {}
    public Employee(String EmployeeName, String Address1, String Address2,String City,String State, int PostalCode,long HomePhone,int OfficeExtension,String HireDate, String JobClassification, String HourSalComm) {
@@ -22,7 +26,7 @@ public class Employee {
    this.PostalCode=PostalCode;
    this.HomePhone=HomePhone;
    this.OfficeExtension=OfficeExtension;
-   this.HireDate=HireDate;
+   HireDate = format.parse(HireData);
    this.JobClassification=JobClassification;
    this.HourSalComm=HourSalComm;
    }
@@ -87,12 +91,13 @@ public class Employee {
    public void setOfficeExtension( int OfficeExtension1) {
       this.OfficeExtension = OfficeExtension1;
    }
-   public String getHireDate() {
+   public Date getHireDate() {
       return HireDate;
    }
    
    public void setHireDate( String HireDate1) {
-      this.HireDate = HireDate1;
+      this.HireDate= format.parse(HireDate1);
+
    }
       public String getJobClassification() {
       return JobClassification;
