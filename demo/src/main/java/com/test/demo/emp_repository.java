@@ -1,2 +1,2 @@
 @Repository
-public interface EmpRepository extends JpaRepository<Employee, Long> {}
+public interface EmpRepository extends JpaRepository<Employee> {}
